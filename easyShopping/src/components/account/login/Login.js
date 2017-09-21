@@ -16,7 +16,7 @@ const Login = ( { userName } ) => {
                 <fieldset>
                     <legend><h1>{userName}</h1></legend>
                     <div className="_loginForm">
-                        <LoginForm />
+                       Testing Reducer 
                     </div>
                 </fieldset>
             </div>

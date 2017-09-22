@@ -15,7 +15,6 @@ export const addHelloReact = () => ({
 let nextNameId = 0
 
 export function addName( text ) {
-
     return {
         type: constants.ADD_NAME,
         id: nextNameId++,

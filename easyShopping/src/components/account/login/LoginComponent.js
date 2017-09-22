@@ -2,33 +2,58 @@
  * Created by bsingh on 08/21/2017.
  */
 import React from 'react'
-import { Field } from 'redux-form'
+import { Field, reduxForm } from 'redux-form'
 import { connect } from 'react-redux'
 import {loginUser}  from './../../../middleware/LoginAction'
 import {addName} from './../../../actions/helloWorldAction'
 
 
+class LoginForm extends React.Component {
 
-const LoginForm = ({ dispatch }) => {
-     let loginId
-     let password
 
-    return (
+    constructor(props) {
+        super(props);
+        this.state = {
+                loginId: '',
+                password: ''
+                    
+        };
 
-               <form onSubmit={e => {                              
-                dispatch(addName(loginId.value))
-              
-            }}>
-                
+        this.handleInputChange = this.handleInputChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
+        
+      }
+
+    handleInputChange(event) {
+        const target = event.target;
+        const value = target.value;
+        const name = target.name;
+
+        this.setState({
+          [name]: value
+        });
+      }
+
+    handleSubmit(event) {
+        const {dispatch} = this.props;
+        event.preventDefault();
+        dispatch(addName( this.state.loginId));
+        
+      }
+    
+    render() {
+        const {dispatch} = this.props;
+        return (
+
+                <form onSubmit={this.handleSubmit}>
                 <table className="_loginFormTable">
                     <tr>
                         <td><label>Login Id</label></td>
 
 
                         <td>
-                           <input type ='text' ref={node => {
-                               loginId = node
-                     }} />
+                            <Field name="loginId"  value={this.state.loginId} onChange={this.handleInputChange} component="input" type="text" placeholder="Login Id" maxlength="3"
+                                size="20" />
                         </td>
                     </tr>
                     <tr>
@@ -36,9 +61,8 @@ const LoginForm = ({ dispatch }) => {
 
 
                         <td>
-                            <input type='password' ref={node => {
-                                password = node
-                     }} />
+                            <Field name="password" component="input" type="password" value={this.state.password} onChange={this.handleInputChange} placeholder="Password"
+                                maxlength="3" size="20" />
                         </td>
                     </tr>
 
@@ -76,10 +100,11 @@ const LoginForm = ({ dispatch }) => {
             </form>
         )
     }
+}
+
+LoginForm = reduxForm( {
+    form: 'LoginForm'
+} )( LoginForm )
 
 
-
-const LoginComponent = connect()(LoginForm)
-
-
-export default LoginComponent
+export default LoginForm

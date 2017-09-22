@@ -16,12 +16,12 @@ class Login extends React.Component {
 
         const userStatus = this.props.message;
 
-        if ( userStatus == 'Sign in' ) {
+       /*1 if ( userStatus == 'Sign in' ) {*/
             return (
 
                 <LoginBox message={this.props.message} />
             )
-        }
+        /*}
 
         else {
 
@@ -30,7 +30,7 @@ class Login extends React.Component {
 
                 <Home message={this.props.message} />
             )
-        }
+        }*/
     }
 }
 

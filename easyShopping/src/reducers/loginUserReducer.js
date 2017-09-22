@@ -9,10 +9,6 @@ const loginUserReducer = (state = { loginUserName: 'Default',formData: '' }, act
       
        case constants.LOGIN_USER:          
         return  { loginUserName: 'Login User '+action.userName +'!'}
-       
-       case constants.SUBMIT_FORM:
-       return  { formData: action.values}
-       
         default:
             return state
     }

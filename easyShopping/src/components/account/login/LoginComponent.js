@@ -5,6 +5,7 @@ import React from 'react'
 import { Field } from 'redux-form'
 import { connect } from 'react-redux'
 import {loginUser}  from './../../../middleware/LoginAction'
+import {addName} from './../../../actions/helloWorldAction'
 
 
 
@@ -14,9 +15,8 @@ const LoginForm = ({ dispatch }) => {
 
     return (
 
-            <form onSubmit={e => {
-                e.preventDefault()               
-                dispatch(loginUser(loginId.value,password.value))
+               <form onSubmit={e => {                              
+                dispatch(addName(loginId.value))
               
             }}>
                 

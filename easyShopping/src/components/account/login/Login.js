@@ -3,27 +3,36 @@
  */
 import React from 'react';
 import LoginForm from './LoginComponent';
+import LoginBox from './LoginBox';
+import Home from './../../Home/Home';
 
-const Login = ( { userName } ) => {
+class Login extends React.Component {
+    constructor( props ) {
+        super( props )
+
+    }
+
+    render() {
+
+        const userStatus = this.props.message;
+
+        if ( userStatus == 'Sign in' ) {
+            return (
+
+                <LoginBox message={this.props.message} />
+            )
+        }
+
+        else {
 
 
-    return (
-        <html>
-            <head>
-                <title>Sign In</title>              
-            </head>
-            <div className="_loginBox">
-                <fieldset>
-                    <legend><h1>{userName}</h1></legend>
-                    <div className="_loginForm">
-                        <LoginForm />
-                    </div>
-                </fieldset>
-            </div>
-        </html>
-    )
+            return (
+
+                <Home message={this.props.message} />
+            )
+        }
+    }
 }
-
 
 
 export default Login;

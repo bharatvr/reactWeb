@@ -9,7 +9,7 @@ import login from './../components/account/login/Login'
 
 const mapStateToProps = (state, ownProps) => {
     return {
-        userName: 'Sign In'
+        message: state.helloWorldReducer.firstName
       
     }
 }

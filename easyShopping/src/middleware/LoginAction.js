@@ -15,6 +15,3 @@ export function loginUser( userName, password ) {
     }
 }
 
-export const addHelloWorld = () => ({
-    type: constants.HELLO_WORLD
-})

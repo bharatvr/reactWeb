@@ -3,10 +3,7 @@
  */
 import React from 'react'
 import { Field, reduxForm } from 'redux-form'
-import { connect } from 'react-redux'
 import {loginUser}  from './../../../middleware/LoginAction'
-import {addName} from './../../../actions/helloWorldAction'
-
 
 class LoginForm extends React.Component {
 
@@ -42,7 +39,6 @@ class LoginForm extends React.Component {
       }
     
     render() {
-        const {dispatch} = this.props;
         return (
 
                 <form onSubmit={this.handleSubmit}>

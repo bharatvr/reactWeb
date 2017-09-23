@@ -2,7 +2,7 @@
  * Created by bsingh on 12/13/2016.
  */
 import React, { PropTypes } from 'react';
-import HelloUser from './UserForm'
+
 const HelloComponent = ({userName}) => {
 
     return (

@@ -4,7 +4,7 @@
  */
 import * as constants from './../constants/Constants'
 
-const loginUserReducer = (state = { firstName: '',lastName: 'Test',formData: '' }, action) => {
+const loginUserReducer = (state = { firstName: 'Welcome!',lastName: 'Test',formData: '' }, action) => {
     
     switch (action.type) {
          case constants.LOGIN_USER:

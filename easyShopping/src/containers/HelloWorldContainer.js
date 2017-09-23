@@ -2,9 +2,8 @@
  * Created by bsingh on 09/20/2017.
  */
 import { connect } from 'react-redux'
-import HelloComponent from './../components/HelloComponent'
 import * as actions from './../actions/helloWorldAction'
-import login from './../components/account/login/Login'
+import home from './../components/home/Home'
 
 
 const mapStateToProps = (state, ownProps) => {
@@ -22,6 +21,6 @@ const mapDispatchToProps =  ({
 const HelloWorldContainer = connect(
     mapStateToProps,
     mapDispatchToProps
-)(login)
+)(home)
 
 export default HelloWorldContainer

@@ -4,7 +4,7 @@
 import React from 'react';
 import LoginForm from './LoginComponent';
 import LoginBox from './LoginBox';
-import Home from './../../Home/Home';
+import Home from './../../home/Home';
 
 class Login extends React.Component {
     constructor( props ) {

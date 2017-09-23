@@ -3,7 +3,7 @@ import { Provider } from 'react-redux';
 import { Router, Route, browserHistory } from 'react-router';
 
 import Layout from './layout/Layout';
-import Login from './account/login/Login';
+import Login from './../containers/LoginContainer';
 import HelloWorldContainer from './../containers/HelloWorldContainer'
 
 const Root = ( { store } ) => (

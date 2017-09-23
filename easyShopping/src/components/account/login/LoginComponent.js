@@ -37,7 +37,7 @@ class LoginForm extends React.Component {
     handleSubmit(event) {
         const {dispatch} = this.props;
         event.preventDefault();
-        dispatch(addName( this.state.loginId));
+        dispatch(loginUser( this.state.loginId));
         
       }
     
@@ -92,7 +92,7 @@ class LoginForm extends React.Component {
                     <tr>
                         <td>&nbsp;</td>
                         <td>
-                            <button type="submit" className="_myButton">&nbsp;Create&nbsp;Your&nbsp;Account</button>
+                            <button type="button" className="_myButton">&nbsp;Create&nbsp;Your&nbsp;Account</button>
                         </td>
                     </tr>
                 </table>

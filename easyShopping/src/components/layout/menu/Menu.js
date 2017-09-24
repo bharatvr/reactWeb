@@ -7,8 +7,8 @@ class Menu extends React.Component {
             <div className="_menuDiv">
                 <a className="_subMenu" href="#">Conditions&nbsp;of&nbsp;Use</a>
                 <a className="_subMenu" href="#">Privacy&nbsp;Notice</a>
-                <a className="_subMenu" href="/userInfo">UserInfo</a>
-                <a className="_subMenu" href="/account">Sign&nbsp;In&nbsp;&nbsp;</a>
+                <a className="_subMenu" href="/register">Register&nbsp;Here</a>
+                <a className="_subMenu" href="/login">Sign&nbsp;In&nbsp;&nbsp;</a>
 
             </div>
 

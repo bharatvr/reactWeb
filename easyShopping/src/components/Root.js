@@ -12,8 +12,8 @@ const Root = ( { store } ) => (
         <Router history={browserHistory}>
             <Route path="/layout" component={Layout}>
                 <Route path="/" component={Login} />
-                <Route path="/account" component={Login} />
-                <Route path="/userInfo" component={HelloWorldContainer} />
+                <Route path="/login" component={Login} />
+                <Route path="/register" component={HelloWorldContainer} />
             </Route>
         </Router>
     </Provider >

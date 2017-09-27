@@ -10,8 +10,7 @@ import LoginForm from './LoginComponent';
         
        }
        
-      render() {   
-          
+      render() {           
        
        return (
         <html>

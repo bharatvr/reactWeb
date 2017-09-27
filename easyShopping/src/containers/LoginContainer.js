@@ -21,6 +21,8 @@ const mapDispatchToProps =  ({
 const LoginContainer = connect(
     mapStateToProps,
     mapDispatchToProps
-)(login)
+)
+
+(login)
 
 export default LoginContainer

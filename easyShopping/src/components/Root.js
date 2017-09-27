@@ -5,6 +5,7 @@ import { Router, Route, browserHistory } from 'react-router';
 import Layout from './layout/Layout';
 import Login from './../containers/LoginContainer';
 import HelloWorldContainer from './../containers/HelloWorldContainer'
+import Home from './../components/home/Home'
 
 const Root = ( { store } ) => (
     

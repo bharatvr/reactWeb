@@ -8,7 +8,7 @@ import home from './../components/home/Home'
 
 const mapStateToProps = (state, ownProps) => {
     return {
-        message: state.helloWorldReducer.firstName
+        message: state.loginUserReducer.firstName
       
     }
 }

@@ -8,8 +8,17 @@ const loginUserReducer = (state = { firstName: 'Welcome!',lastName: 'Test',formD
     
     switch (action.type) {
          case constants.LOGIN_USER:
-            //console.log('Reducer: hello user ')
+            console.log('Reducer: hello user ')
             return  { firstName: 'Welcome! , '+action.userName +'!',lastName: 'Last Name' }
+            
+         case constants.REQUEST_POSTS:
+             console.log('Reducer: hello user ')
+             return  { firstName: 'Welcome! , '+action.userName +'!',lastName: 'Last Name' }
+             
+         case constants.RECEIVE_POSTS:
+             console.log('Reducer: hello user ')
+             return  { firstName: 'Welcome! , '+action.userName +'!',lastName: 'Last Name' }
+             
       
         default:
             return state

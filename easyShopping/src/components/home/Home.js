@@ -15,7 +15,7 @@ import React from 'react';
                 <title>Home</title>              
             </head>
             <div className="_loginBox">
-                Authenticated  User: {this.props.message}
+                After Login: {this.props.message}
             </div>
         </html>
     )

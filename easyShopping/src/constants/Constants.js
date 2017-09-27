@@ -9,5 +9,6 @@ export const CONTACT_PAGE = 'CONTACT_PAGE'
 export const REQUEST_POSTS = 'REQUEST_POSTS'
 export const RECEIVE_POSTS = 'RECEIVE_POSTS'
 export const LOGIN_USER = 'LOGIN_USER'
+export const TEST_USER = 'TEST_USER'
 
 

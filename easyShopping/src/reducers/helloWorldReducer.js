@@ -3,7 +3,7 @@
  */
 import * as constants from './../constants/Constants'
 
-const helloWorldReducer = (state = { firstName: 'Sign in',lastName: 'Test',formData: '' }, action) => {
+const helloWorldReducer = (state = { firstName: 'Bharat',lastName: 'Test',formData: '' }, action) => {
     
     switch (action.type) {
         case constants.HELLO_WORLD:

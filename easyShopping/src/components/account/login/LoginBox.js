@@ -20,7 +20,9 @@ import LoginForm from './LoginComponent';
             </head>
             <div className="_loginBox">
                 <fieldset>
-                    <legend><h1>{this.props.message}</h1></legend>
+                    <legend><h1>Sign In</h1></legend>
+                    <div >{this.props.message}
+                </div>
                     <div className="_loginForm">
                         <LoginForm />
                     </div>

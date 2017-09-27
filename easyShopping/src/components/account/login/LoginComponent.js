@@ -3,10 +3,7 @@
  */
 import React from 'react'
 import { Field, reduxForm } from 'redux-form'
-import { connect } from 'react-redux'
 import {loginUser}  from './../../../middleware/LoginAction'
-import {addName} from './../../../actions/helloWorldAction'
-
 
 class LoginForm extends React.Component {
 
@@ -37,12 +34,11 @@ class LoginForm extends React.Component {
     handleSubmit(event) {
         const {dispatch} = this.props;
         event.preventDefault();
-        dispatch(addName( this.state.loginId));
+        dispatch(loginUser( this.state.loginId));
         
       }
     
     render() {
-        const {dispatch} = this.props;
         return (
 
                 <form onSubmit={this.handleSubmit}>
@@ -92,7 +88,7 @@ class LoginForm extends React.Component {
                     <tr>
                         <td>&nbsp;</td>
                         <td>
-                            <button type="submit" className="_myButton">&nbsp;Create&nbsp;Your&nbsp;Account</button>
+                            <button type="button" className="_myButton">&nbsp;Create&nbsp;Your&nbsp;Account</button>
                         </td>
                     </tr>
                 </table>

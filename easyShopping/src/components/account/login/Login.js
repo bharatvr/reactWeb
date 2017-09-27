@@ -4,7 +4,7 @@
 import React from 'react';
 import LoginForm from './LoginComponent';
 import LoginBox from './LoginBox';
-import Home from './../../Home/Home';
+import Home from './../../home/Home';
 
 class Login extends React.Component {
     constructor( props ) {
@@ -16,21 +16,20 @@ class Login extends React.Component {
 
         const userStatus = this.props.message;
 
-       /*1 if ( userStatus == 'Sign in' ) {*/
+        if ( userStatus == 'Welcome!' ) {
             return (
 
                 <LoginBox message={this.props.message} />
             )
-        /*}
+        }
 
         else {
-
-
-            return (
+        alert('Inside else ');
+          return (
 
                 <Home message={this.props.message} />
             )
-        }*/
+        }
     }
 }
 

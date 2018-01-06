@@ -13,10 +13,7 @@ import LoginForm from './LoginComponent';
       render() {           
        
        return (
-        <html>
-            <head>
-                <title>Sign In</title>              
-            </head>
+        
             <div className="_loginBox">
                 <fieldset>
                     <legend><h1>Sign In</h1></legend>
@@ -27,7 +24,7 @@ import LoginForm from './LoginComponent';
                     </div>
                 </fieldset>
             </div>
-        </html>
+       
      )
      }
     }

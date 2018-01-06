@@ -3,14 +3,6 @@
  */
 import * as constants from './../constants/Constants'
 
-export const addHelloWorld = () => ({
-        type: constants.HELLO_WORLD
-})
-
-export const addHelloReact = () => ({
-    type: constants.HELLO_REACT
-})
-
 
 let nextNameId = 0
 

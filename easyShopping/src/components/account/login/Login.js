@@ -7,45 +7,55 @@ import LoginBox from './LoginBox';
 import Home from './../../home/Home';
 import LoginContainer from './LoginComponent';
 import { browserHistory } from 'react-router';
+import { connect } from 'react-redux'
+import * as actions from '../../../actions/helloWorldAction'
+
 
 class Login extends React.Component {
-    constructor( props ) {
+        constructor( props ) {
         super( props )
 
     }
-    
-
-    
+  
     render() {
 
-        
-        const userStatus = this.props.message;
-        
-        let outPut;
-        
-        if ( userStatus == 'Welcome!' ) {
-             outPut= <LoginBox message='Enter your login details' />
-            
-        }
-        
-        else {
-            outPut= <Home message={userStatus} /> // Not working
-                //outPut= <LoginBox message={userStatus} /> // working 
-        //browserHistory.push({pathname: '/register', state: {firstName: "hello, im a passed message!"}});
-        }
-        
-       
-            return (
 
-                    <div>
-                  
-                    {outPut}
-                  </div>
-               
-            )
-       
+        const userStatus = this.props.stateInfo.message;
+
+        console.log( "login message " + userStatus )
+
+        let outPut;
+        let pageTitle;
+
+        if ( userStatus && userStatus === 'Please enter login Id and password!' ) {
+            outPut = <LoginBox message={userStatus} />
+            pageTitle = "Login Page"
+        }
+
+        else {
+            outPut = <Home message={userStatus} />
+            pageTitle = "User Home Page"
+        }
+
+
+        return (
+            <html>
+                <head>
+                    <title>{pageTitle}</title>
+                </head>
+                {outPut}
+            </html>
+        )
+
+    }
+}
+
+const mapStateToProps = ( state, ownProps ) => {
+    return {
+        stateInfo: state.loginUserReducer
+
     }
 }
 
 
-export default Login;
+export default connect( mapStateToProps )( Login );

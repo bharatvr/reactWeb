@@ -25,14 +25,17 @@ export function loginUser( userName, password ) {
                 }
         }
 
-        let targetUrl = 'http://127.0.0.1:8090/SurveyRestAPI/question'
-         let testUrl='http://ip.jsontest.com'
-       
-             return fetch( targetUrl,options)
-            .then( response => response.json() )
-            .then( json => dispatch( receivePosts( userName, json ) ) )
+//        console.log('Hello inside action');
+//        let targetUrl = 'http://127.0.0.1:8090/SurveyRestAPI/question'
+//         let testUrl='http://ip.jsontest.com'
+//       
+//             return fetch( targetUrl,options)
+//            .then( response => response.json() )
+//            .then( json => dispatch( receivePosts( userName, json ) ) )
 
 
+        dispatch( requestPosts( userName));
+        
     }
 
 }

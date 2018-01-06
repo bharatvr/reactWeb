@@ -10,14 +10,10 @@ import React from 'react';
        
       render() {   
        return (
-        <html>
-            <head>
-                <title>Home</title>              
-            </head>
+       
             <div className="_loginBox">
                 After Login: {this.props.message}
             </div>
-        </html>
     )
      }
     }
